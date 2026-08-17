@@ -100,9 +100,7 @@
           <a href="#inside">ماذا بداخله؟</a><a href="#chapters">المواقف</a
           ><a href="#faq">الأسئلة</a>
         </nav>
-        <a class="header-cta" href="https://payhip.com/buy?link=aPH50"
-          >احصلي على الدليل</a
-        >
+        <a class="header-cta" href="#purchase">اختاري طريقة الدفع</a>
       </header>
       <section class="hero" id="top">
         <div class="torn-paper-art" aria-hidden="true">
@@ -119,8 +117,8 @@
             بعد الكلام.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="https://payhip.com/buy?link=aPH50"
-              >أريد النسخة الرقمية
+            <a class="button primary" href="#purchase"
+              >اختاري طريقة الدفع
               <svg viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M5 12h14M13 6l6 6-6 6"></path></svg></a
             ><a class="button secondary" href="#preview">شاهدي ما بداخلها</a>
@@ -471,13 +469,27 @@
           <div class="price">
             <span>السعر عند الدفع</span><strong>18.50 دولار</strong>
           </div>
-          <a
-            class="button primary purchase-button"
-            href="https://payhip.com/buy?link=aPH50"
-            >احصلي على الدليل الآن
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M5 12h14M13 6l6 6-6 6"></path></svg></a
-          ><small
+          <div class="payment-options" aria-label="اختاري طريقة الدفع">
+            <a
+              class="button primary purchase-button"
+              data-buy-method="paypal_or_card"
+              href="https://payhip.com/buy?link=aPH50"
+              >الدفع عبر PayPal أو بطاقة دولية
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path></svg></a
+            >
+            <a
+              class="button bank-transfer-button"
+              data-buy-method="bank_transfer"
+              href="https://wa.me/966558996599?text=%D9%85%D8%B1%D8%AD%D8%A8%D8%A7%D9%8B%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D8%A8%D8%B4%D8%B1%D8%A7%D8%A1%20%D8%AF%D9%84%D9%8A%D9%84%20%C2%AB%D9%85%D8%A7%D8%B0%D8%A7%20%D8%A3%D9%82%D9%88%D9%84%20%D9%84%D9%87%D8%9F%C2%BB%20%D8%B9%D9%86%20%D8%B7%D8%B1%D9%8A%D9%82%20%D8%A7%D9%84%D8%AA%D8%AD%D9%88%D9%8A%D9%84%20%D8%A7%D9%84%D8%A8%D9%86%D9%83%D9%8A%20%D8%AF%D8%A7%D8%AE%D9%84%20%D8%A7%D9%84%D8%B3%D8%B9%D9%88%D8%AF%D9%8A%D8%A9."
+              target="_blank"
+              rel="noopener noreferrer"
+              >الدفع بالتحويل البنكي داخل السعودية
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path></svg></a
+            >
+          </div>
+          <small
             >يعادل نحو 69 ريالاً سعودياً بحسب سعر الصرف. منتج رقمي ولا توجد نسخة
             ورقية ضمن هذا العرض.</small
           >
