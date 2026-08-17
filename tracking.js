@@ -49,8 +49,8 @@
         content_type: "product",
         payment_method: paymentMethod,
         link_url: link.href,
-        value: 18.5,
-        currency: "USD",
+        value: 69,
+        currency: "SAR",
       };
 
       if (typeof window.gtag === "function") {
