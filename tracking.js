@@ -20,7 +20,7 @@
   }
 
   const checkoutLinks = document.querySelectorAll(
-    'a[href^="https://payhip.com/buy?link=aPH50"]',
+    'a[data-buy-method="paypal_or_card"]',
   );
 
   for (const link of checkoutLinks) {
@@ -36,15 +36,33 @@
     }
 
     link.href = checkoutUrl.toString();
+  }
+
+  const paymentLinks = document.querySelectorAll("a[data-buy-method]");
+
+  for (const link of paymentLinks) {
     link.addEventListener("click", () => {
+      const paymentMethod = link.dataset.buyMethod || "unknown";
+      const eventDetails = {
+        content_name: "ماذا أقول له؟",
+        content_ids: ["aPH50"],
+        content_type: "product",
+        payment_method: paymentMethod,
+        link_url: link.href,
+        value: 18.5,
+        currency: "USD",
+      };
+
+      if (typeof window.gtag === "function") {
+        window.gtag("event", "buy_click", eventDetails);
+      }
+
       if (typeof window.fbq === "function") {
-        window.fbq("trackCustom", "CheckoutClick", {
-          content_name: "ماذا أقول له؟",
-          content_ids: ["aPH50"],
-          content_type: "product",
-          value: 18.5,
-          currency: "USD",
-        });
+        window.fbq("trackCustom", "PaymentOptionClick", eventDetails);
+
+        if (paymentMethod === "paypal_or_card") {
+          window.fbq("trackCustom", "CheckoutClick", eventDetails);
+        }
       }
     });
   }
