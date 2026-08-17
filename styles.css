@@ -1617,3 +1617,23 @@ footer small {
     transform: scale(1.08) rotate(0.35deg);
   }
 }
+
+.payment-options {
+  width: min(100%, 460px);
+  display: grid;
+  gap: 0.8rem;
+}
+.payment-options .purchase-button,
+.payment-options .bank-transfer-button {
+  width: 100%;
+}
+.button.bank-transfer-button {
+  color: var(--plum);
+  background: var(--paper);
+  border-color: var(--plum);
+}
+.button.bank-transfer-button:hover {
+  color: #fff;
+  background: var(--sage);
+  border-color: var(--sage);
+}
